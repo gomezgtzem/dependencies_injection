@@ -1,9 +1,6 @@
 package org.generation.dependencies_injection.model;
 
-import org.generation.dependencies_injection.service.StudentServiceImpl;
-
 import java.util.Date;
-import java.util.List;
 
 public class Student
 {
@@ -73,19 +70,5 @@ public class Student
     public Date getBirthDate()
     {
         return birthDate;
-    }
-
-    public interface StudentService<studentServiceImpl>
-    {
-        void add( Student student );
-
-        void delete( Student student );
-
-        List<Student> all();
-
-        Student findById( String id );
-
-        StudentServiceImpl studentServiceImpl = new StudentServiceImpl();
-
     }
 }
